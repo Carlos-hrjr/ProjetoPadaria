@@ -10,7 +10,9 @@ export default props => (
             }}/>
         </View>
         <View style={styles.botao}>
-            <Button color='#471C0A' title="Cadastrar Fornada"/>
+            <Button color='#471C0A' title="Cadastrar Fornada" onPress={() => {
+                Actions.fornada();
+            }}/>
         </View>
         <View style={styles.botao}>
             <Button color='#471C0A' title="Cadastrar Promoção"/>

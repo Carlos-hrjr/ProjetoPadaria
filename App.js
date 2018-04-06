@@ -17,6 +17,7 @@ import Painel from './src/components/Painel';
 import CadastrarPadeiro from './src/components/CadastrarPadeiro';
 import Login from './src/components/Login';
 import CadastrarUsuario from './src/components/CadastroUsuario';
+import Fornada from './src/components/Fornada';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -28,6 +29,7 @@ export default class App extends Component<Props> {
           <Scene key='painel' component={Painel} title='Painel de Controle'/>
           <Scene key='cadastrarPadeiro' component={CadastrarPadeiro} title='Cadastrar Padeiro'/>
           <Scene key='cadastrarUsuario' component={CadastrarUsuario} title='Sign In'/>
+          <Scene key='fornada' component={Fornada} title='Cadastrar Fornada'/>
         </Router>
       </View>
     );
