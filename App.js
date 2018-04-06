@@ -12,27 +12,23 @@ import {
   View
 } from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import {Router, Scene} from 'react-native-router-flux';
+import Painel from './src/components/Painel';
+import CadastrarPadeiro from './src/components/CadastrarPadeiro';
+import Login from './src/components/Login';
+import CadastrarUsuario from './src/components/CadastroUsuario';
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+        <Router sceneStyle={{paddingTop: 55, backgroundColor: '#471C0A'}}>
+          <Scene key='login' component={Login} initil title='Login'/>
+          <Scene key='painel' component={Painel} title='Painel de Controle'/>
+          <Scene key='cadastrarPadeiro' component={CadastrarPadeiro} title='Cadastrar Padeiro'/>
+          <Scene key='cadastrarUsuario' component={CadastrarUsuario} title='Sign In'/>
+        </Router>
       </View>
     );
   }
@@ -41,18 +37,6 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    backgroundColor: '#471C0A'
+  }
 });
