@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
     painel: {
         flex: 1,
         padding: 20,
-        backgroundColor: '#D4CA90'
+        backgroundColor: '#D4CA90',
+        padding: 20
     },
     botao: {
         padding: 20

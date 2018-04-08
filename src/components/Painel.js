@@ -15,7 +15,9 @@ export default props => (
             }}/>
         </View>
         <View style={styles.botao}>
-            <Button color='#471C0A' title="Cadastrar Promoção"/>
+            <Button color='#471C0A' title="Cadastrar Promoção" onPress={() =>{
+                Actions.promocao();
+            }}/>
         </View>
     </View>
 )
@@ -25,7 +27,8 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 20,
         backgroundColor: '#D4CA90',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        padding: 20
     },
     botao: {
         padding: 20
