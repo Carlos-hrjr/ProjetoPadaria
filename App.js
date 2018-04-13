@@ -19,6 +19,7 @@ import Login from './src/components/Login';
 import CadastrarUsuario from './src/components/CadastroUsuario';
 import Fornada from './src/components/Fornada';
 import Promocao from './src/components/Promocao';
+import CadastrarProduto from './src/components/CadastrarProduto';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -32,6 +33,7 @@ export default class App extends Component<Props> {
           <Scene key='cadastrarUsuario' component={CadastrarUsuario} title='Sign In'/>
           <Scene key='fornada' component={Fornada} title='Cadastrar Fornada'/>
           <Scene key='promocao' component={Promocao} title='Cadastrar Promoção' />
+          <Scene key='produto' component={CadastrarProduto} title='CadastrarProduto' />
         </Router>
       </View>
     );

@@ -15,6 +15,11 @@ export default props => (
             }}/>
         </View>
         <View style={styles.botao}>
+            <Button color='#471C0A' title="Cadastrar Produto" onPress={() => {
+                Actions.produto();
+            }}/>
+        </View>
+        <View style={styles.botao}>
             <Button color='#471C0A' title="Cadastrar Promoção" onPress={() =>{
                 Actions.promocao();
             }}/>
