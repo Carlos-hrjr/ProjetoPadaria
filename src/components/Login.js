@@ -33,7 +33,7 @@ export default class Login extends Component{
                 </View>
                 <View>
                     <Text style={{fontSize: 20, alignSelf: 'center'}}>Senha</Text>
-                    <TextInput value={this.state.senha} onChangeText={valorDoCampo => {
+                    <TextInput secureTextEntry value={this.state.senha} onChangeText={valorDoCampo => {
                         this.setState({senha: valorDoCampo});
                     }}></TextInput>
                 </View>

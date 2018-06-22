@@ -59,7 +59,7 @@ export default class CadastroUsuario extends Component {
                 </View>
                 <View>
                     <Text style={{fontSize: 20}}>Senha</Text>
-                    <TextInput value={this.state.senha} onChangeText={valorDoCampo => {
+                    <TextInput secureTextEntry value={this.state.senha} onChangeText={valorDoCampo => {
                         this.setState({senha: valorDoCampo});
                     }}></TextInput>
                 </View>

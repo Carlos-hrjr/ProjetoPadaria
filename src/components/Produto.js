@@ -1,13 +1,18 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, TouchableHighlight, Modal, ScrollView} from 'react-native';
+import {adicionaProduto} from '../actions/PedidoActions';
+import {connect} from 'react-redux';
 
-export default class Produto extends Component {
+class Produto extends Component {
 
     render(){
         return(
             <ScrollView style={styles.container}>
-                <TouchableHighlight onPress={
-                    this.props.fecharModal
+                <TouchableHighlight onPress={() => {
+                    this.props.adicionaProduto(this.props.produto);
+                    this.props.fecharModal;
+                }
+                    
                 }>
                     <View>
                         <Text>{this.props.produto.descricao}</Text>
@@ -31,3 +36,5 @@ const styles = StyleSheet.create({
         borderColor: '#999'
     }
 })
+
+export default connect(null, {adicionaProduto})(Produto);

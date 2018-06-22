@@ -16,12 +16,12 @@ const styles = StyleSheet.create({
   },
   slide1: {
     flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#D4CA90',
   },
   slide2: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#D4CA90',
   },
@@ -37,10 +37,10 @@ export default class TelaUsuario extends Component {
     return (
       <Swiper style={styles.wrapper} showsButtons={true}>
         <View style={styles.slide1}>
-          <Pedido/>
+          <PainelUsuario/>
         </View>
         <View style={styles.slide2}>
-          <PainelUsuario/>
+          <Pedido/>
         </View>
         
       </Swiper>
