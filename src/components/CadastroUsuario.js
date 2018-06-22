@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, TextInput, Button, StyleSheet} from 'react-native';
 import {Actions} from 'react-native-router-flux';
+import axios from 'axios';
 
 export default class CadastroUsuario extends Component {
     constructor(props){
@@ -10,19 +11,34 @@ export default class CadastroUsuario extends Component {
     }
 
     verificaValores(){
+        let temErro = false;
         if(this.state.nome === ''){
             alert('Digite o nome');
+            temErro = true;
             return false;
         }
         if(this.state.email === ''){
             alert('Digite o email');
+            temErro = true;
             return false;
         }
         if(this.state.senha.length < 6){
             alert('A senha deve ter no mínimo 6 dígitos');
+            temErro = true;
             return false;
         }
-        alert('Usuário cadastrado com sucesso!');
+        if(!temErro){
+            axios.post('https://apipadaria.herokuapp.com/api/user', 
+            {
+                name: this.state.nome,
+                email: this.state.email,
+                password: this.state.senha,
+                perfil_id: 2
+            }
+        )
+                .then(() => alert('Usuário cadastrado com sucesso!'))
+                .catch(() => alert('Erro de conexão com o servidor'));
+        }
         return true;
     }
 

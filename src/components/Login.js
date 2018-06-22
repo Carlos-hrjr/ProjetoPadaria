@@ -40,7 +40,10 @@ export default class Login extends Component{
                 <View style={styles.botao}>
                     <Button color="#471C0A" title="Login" onPress={() => {
                         if(this.verificaValores()){
+                            if(this.state.email === 'adm')
                             Actions.painel();
+                            else
+                            Actions.usuario();
                         }
                     }}></Button>
                 </View>

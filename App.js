@@ -20,6 +20,9 @@ import CadastrarUsuario from './src/components/CadastroUsuario';
 import Fornada from './src/components/Fornada';
 import Promocao from './src/components/Promocao';
 import CadastrarProduto from './src/components/CadastrarProduto';
+import AdicionarProdutoPadaria from './src/components/AdicionarProdutoPadaria';
+import TelaUsuario from './src/components/TelaUsuario';
+import ModalTester from './src/components/teste';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -33,7 +36,9 @@ export default class App extends Component<Props> {
           <Scene key='cadastrarUsuario' component={CadastrarUsuario} title='Sign In'/>
           <Scene key='fornada' component={Fornada} title='Cadastrar Fornada'/>
           <Scene key='promocao' component={Promocao} title='Cadastrar Promoção' />
-          <Scene key='produto' component={CadastrarProduto} title='CadastrarProduto' />
+          <Scene key='produto' component={CadastrarProduto} title='Cadastrar Produto' />
+          <Scene key='usuario' component={TelaUsuario} title='Padaria'/>
+          <Scene key='teste' component={ModalTester} title='teste'/>
         </Router>
       </View>
     );
